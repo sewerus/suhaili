@@ -1,0 +1,11 @@
+<div class="posts">
+  <div class ="container">
+    <% @posts.each do |t| %>
+    <div class="card cd-xs-4">
+      <h2><%= t.title %> </h2>
+      <p><%= t.content %></p>
+      <p><%= t.created_at %></p>
+    </div>
+    <% end %>
+  </div>
+</div>

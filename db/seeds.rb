@@ -8,3 +8,4 @@
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 # Environment variables (ENV['...']) can be set in the file .env file.
+Post.create(title: 'First post', content: 'hello form first post')
