@@ -11,5 +11,7 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require cerulean/loader
+ *= require cerulean/bootswatch
  *= require_self
- */
+*/

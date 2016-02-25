@@ -13,6 +13,13 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
+# twitter bootstrap css & javascript toolkit
+gem 'twitter-bootswatch-rails', '~> 3.3.4'
+
+# twitter bootstrap helpers gem, e.g., alerts etc...
+gem 'twitter-bootswatch-rails-helpers'
+
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise-i18n'
