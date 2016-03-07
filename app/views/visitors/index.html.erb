@@ -1,43 +1,48 @@
-<!-- logo -->
+<!-- tytul -->
 <div class="container text-center">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <h1>SUHAILI Yach Klub</h1>
+    <div class="col-md-10 col-md-offset-1">
+      <h1 style="font-family: 'Frijole', cursive; font-size: 50px">Yacht Klub SUHAILI</h1>
     </div>
   </div>
 </div>
 
-<!-- img -->
-<div class="container">
+<!-- logo i img --><br>
+<div class="container col-md-offset-1">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <img class="col-md-4" src="https://scontent.fwaw3-1.fna.fbcdn.net/hphotos-xtf1/v/t34.0-12/12825522_188832441491181_1722429250_n.jpg?oh=4fcddf66e76d4c32cdd211d323a11118&oe=56DF038E">
-      <img class="img-responsive img-rounded" src="http://kzsuhaili.lo5.bielsko.pl/gallery/med/ee5780d51544496c1be52963f6c9b104.jpg">
+    <div class="col-md-10 text-center">
+      <div class="col-md-4 col-md-offset-1"><img src="https://scontent.fwaw3-1.fna.fbcdn.net/hphotos-xtf1/v/t34.0-12/12825522_188832441491181_1722429250_n.jpg?oh=4fcddf66e76d4c32cdd211d323a11118&oe=56DF038E"></div>
+      <div class="col-md-7"><img class="img-rounded" src="http://kzsuhaili.lo5.bielsko.pl/gallery/med/ee5780d51544496c1be52963f6c9b104.jpg"></div>
     </div>
   </div>
 </div>
 
 <!-- menu -->
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-10 col-md-offset-1">
   <nav class="navbar navbar-inverse">
-    <div class="container">
-      <div class="navbar-header"><!--
+    <div class="container col-md-offset-1"><!--
+      <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <li><%= link_to 'Aktualności', root_path, class: 'navbar-brand' %></li>-->
-      </div>
+        <li><%= link_to 'Aktualności', root_path, class: 'navbar-brand' %></li>
+      </div>-->
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <div class="col-md-1"><li><%= link_to 'Aktualności', root_path, class: 'navbar-brand' %></li></div>
-          <div class="col-md-1 col-md-offset-2"><li><%= link_to 'Klub', root_path, class: 'navbar-brand' %></li></div>
-          <div class="col-md-1 col-md-offset-1"><li><%= link_to 'Galeria', root_path, class: 'navbar-brand' %></li></div>
-          <div class="col-md-1 col-md-offset-1"> <li><%= link_to 'Rejsy', root_path, class: 'navbar-brand' %></li></div>
-          <div class="col-md-1 col-md-offset-1"><li> <%= link_to 'Patenty', root_path, class: 'navbar-brand' %></li></div>
-          <div class="col-md-1 col-md-offset-1"><li> <%= link_to 'Kontakt', root_path, class: 'navbar-brand' %></li></div>
+          <li class="col-md-1"><%= link_to 'Aktualności', root_path, class: 'navbar-brand' %>
+          <li class="col-md-1 col-md-offset-2"><span data-target="#" data-toggle="dropdown"><%= link_to 'Klub', root_path, class: 'navbar-brand' %></span>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'Historia', root_path %></li>
+              <li><%= link_to 'Załoga', root_path  %></li>
+            </ul>
+          </li>
+          <li class="col-md-1 col-md-offset-1"><%= link_to 'Galeria', root_path, class: 'navbar-brand' %></li>
+          <li class="col-md-1 col-md-offset-1"><%= link_to 'Rejsy', root_path, class: 'navbar-brand' %></li>
+          <li class="col-md-1 col-md-offset-1"><%= link_to 'Patenty', root_path, class: 'navbar-brand' %></li>
+          <li class="col-md-1 col-md-offset-1"><%= link_to 'Kontakt', root_path, class: 'navbar-brand' %></li>
         </ul>
       </div>
     </div>
@@ -50,7 +55,7 @@
     <div class="row">
 
         <!-- Blog Entries Column -->
-        <div class="col-md-8">
+        <div class="col-md-7 col-md-offset-1">
 
           <!--
             <h1 class="page-header">
@@ -138,7 +143,7 @@
         </div>
 
         <!-- Blog Sidebar Widgets Column -->
-        <div class="col-md-4">
+        <div class="col-md-3">
 
             <!-- Blog Search Well -->
             <!--
@@ -191,10 +196,31 @@
             </div> -->
 
             <!-- Side Widget Well -->
-            <div class="well text-center">
-                <h4>Komandor Andrzej Owerko</h4>
-                <img src="https://scontent.fwaw3-1.fna.fbcdn.net/hphotos-xft1/v/t34.0-12/12665804_10205615396653086_156458653_n.jpg?oh=b3134a191fcdad1466abf697ed1e813a&oe=56DEBFAE">
-            </div>
+              <div class="well text-center">
+                    <h4>Komandor Andrzej Owerko</h4>
+                    <img src="https://scontent.fwaw3-1.fna.fbcdn.net/hphotos-xft1/v/t34.0-12/12665804_10205615396653086_156458653_n.jpg?oh=b3134a191fcdad1466abf697ed1e813a&oe=56DEBFAE">
+                </div>
+              <!-- mapa pogoda --> <div id="carte_5363642a4469fcbf9c8ea884a0d55ae0"> <a href="http://www.swiatpogody.pl/pogoda-polska/" title="www.swiatpogody.pl">www.swiatpogody.pl</a> <script type="text/javascript">
+              (function() {
+                var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
+                my.src = "http://serwisy.swiatpogody.pl/cartes/js.php?pays=polska&periode=24&taille=mini&x=245&y=235&id=5363642a4469fcbf9c8ea884a0d55ae0";
+                var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
+                      })();
+                    </script>
+                </div><br>
+          <!-- mapa pogoda -->
+          <!-- widget pogoda -->
+          <div class="col-md-offset-3" id="widget_b7ae858664c7aec6f205211c0eab2f5e">
+            <span id="l_b7ae858664c7aec6f205211c0eab2f5e"><a href="http://www.swiatpogody.pl/pogoda-polska/bielsko-biala.html">Swiat Pogody .pl</a></span>
+            <script type="text/javascript">
+              (function() {
+                var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
+                my.src = "http://serwisy.swiatpogody.pl/widget/js.php?ville=30&format=vertical&nb_jours=3&temps&icones&vent&hum&precip&coins&c1=393939&c2=a9a9a9&c3=e6e6e6&c4=ffffff&c5=00d2ff&c6=145787&police=0&t_icones=9&x=160&y=417&id=b7ae858664c7aec6f205211c0eab2f5e";
+                var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
+              })();
+            </script>
+          </div>
+          <!-- widget pogoda -->
 
         </div>
 
