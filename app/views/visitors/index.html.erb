@@ -1,53 +1,4 @@
-<!-- tytul -->
-<div class="container text-center">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <h1 style="font-family: 'Frijole', cursive; font-size: 50px">Yacht Klub SUHAILI</h1>
-    </div>
-  </div>
-</div>
 
-<!-- logo i img --><br>
-<div class="container col-md-offset-1">
-  <div class="row">
-    <div class="col-md-10 text-center">
-      <div class="col-md-4 col-md-offset-1"><img src="https://scontent-ams3-1.xx.fbcdn.net/hphotos-xtf1/v/t34.0-12/12825522_188832441491181_1722429250_n.jpg?oh=294c8bc89721b55a0b96a7efc967152c&oe=56E2F80E"></div>
-      <div class="col-md-7"><img class="img-rounded" src="http://kzsuhaili.lo5.bielsko.pl/gallery/med/ee5780d51544496c1be52963f6c9b104.jpg"></div>
-    </div>
-  </div>
-</div>
-
-<!-- menu -->
-<div class="col-md-10 col-md-offset-1">
-  <nav class="navbar navbar-inverse">
-    <div class="container col-md-offset-1"><!--
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <li><%= link_to 'Aktualności', root_path, class: 'navbar-brand' %></li>
-      </div>-->
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="col-md-1"><%= link_to 'Aktualności', root_path, class: 'navbar-brand' %>
-          <li class="col-md-1 col-md-offset-2"><span data-target="#" data-toggle="dropdown"><%= link_to 'Klub', root_path, class: 'navbar-brand' %></span>
-            <ul class="dropdown-menu">
-              <li><%= link_to 'Historia', root_path %></li>
-              <li><%= link_to 'Załoga', root_path  %></li>
-            </ul>
-          </li>
-          <li class="col-md-1 col-md-offset-1"><%= link_to 'Galeria', root_path, class: 'navbar-brand' %></li>
-          <li class="col-md-1 col-md-offset-1"><%= link_to 'Rejsy', root_path, class: 'navbar-brand' %></li>
-          <li class="col-md-1 col-md-offset-1"><%= link_to 'Patenty', root_path, class: 'navbar-brand' %></li>
-          <li class="col-md-1 col-md-offset-1"><%= link_to 'Kontakt', root_path, class: 'navbar-brand' %></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
 
 <!-- Page Content -->
 <div class="container">
@@ -97,6 +48,7 @@
             <hr>
 
             <!-- Second Blog Post -->
+          <!--
             <h2>
                 <%= link_to 'Ruszyła nasza nowa strona internetowa!', page_path('blogpost') %>
             </h2>
@@ -111,8 +63,10 @@
             <%= link_to ('Czytaj więcej <span class="glyphicon glyphicon-chevron-right"></span>').html_safe, page_path('blogpost'), :class => "btn btn-primary" %>
 
             <hr>
+            -->
 
             <!-- Third Blog Post -->
+          <!--
             <h2>
                 <%= link_to 'Z okazji Bożego Narodzenia składamy serdeczne życzenia!', page_path('blogpost') %>
             </h2>
@@ -126,7 +80,8 @@
             <p>Wszystkiego naj naj, żeglarze!</p>
             <%= link_to ('Czytaj więcej <span class="glyphicon glyphicon-chevron-right"></span>').html_safe, page_path('blogpost'), :class => "btn btn-primary" %>
 
-            <hr>
+
+            <hr> -->
 
             <!-- Pager -->
           <!--
@@ -196,28 +151,39 @@
             </div> -->
 
             <!-- Side Widget Well -->
-              <div class="well text-center">
-                    <h4>Komandor Andrzej Owerko</h4>
+              <div class="well text-center row">
+                    <h4 style="margin-top: -5px">Komandor Andrzej Owerko</h4>
                     <img src="https://scontent-ams3-1.xx.fbcdn.net/hphotos-xft1/v/t34.0-12/12665804_10205615396653086_156458653_n.jpg?oh=b3626759972ce2aa83f227603168c7d1&oe=56E20B6E">
                 </div>
-              <!-- mapa pogoda --> <div id="carte_5363642a4469fcbf9c8ea884a0d55ae0"> <a href="http://www.swiatpogody.pl/pogoda-polska/" title="www.swiatpogody.pl">www.swiatpogody.pl</a> <script type="text/javascript">
+              <!-- img -->
+              <div class="well text-center row">
+                <h4 style="margin-top: -5px">Z widokiem na Wyspę Dużą:</h4>
+                <iframe  src="http://imageserver.webcamera.pl/umiesc/polanczyk" width="100%" border="0" frameborder="0" scrolling="no"></iframe>
+              </div><!-- img -->
+              <!-- mapa pogoda --> <!--
+          <div id="carte_5363642a4469fcbf9c8ea884a0d55ae0"> <a href="http://www.swiatpogody.pl/pogoda-polska/" title="www.swiatpogody.pl">www.swiatpogody.pl</a> <script type="text/javascript">
               (function() {
                 var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
                 my.src = "http://serwisy.swiatpogody.pl/cartes/js.php?pays=polska&periode=24&taille=mini&x=245&y=235&id=5363642a4469fcbf9c8ea884a0d55ae0";
                 var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
                       })();
                     </script>
-                </div><br>
+                </div><br> -->
           <!-- mapa pogoda -->
           <!-- widget pogoda -->
-          <div class="col-md-offset-3" id="widget_b7ae858664c7aec6f205211c0eab2f5e">
-            <span id="l_b7ae858664c7aec6f205211c0eab2f5e"><a href="http://www.swiatpogody.pl/pogoda-polska/bielsko-biala.html">Swiat Pogody .pl</a></span>
-            <script type="text/javascript">
-              (function() {
-                var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
-                my.src = "http://serwisy.swiatpogody.pl/widget/js.php?ville=30&format=vertical&nb_jours=3&temps&icones&vent&hum&precip&coins&c1=393939&c2=a9a9a9&c3=e6e6e6&c4=ffffff&c5=00d2ff&c6=145787&police=0&t_icones=9&x=160&y=417&id=b7ae858664c7aec6f205211c0eab2f5e";
-                var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
-              })();
+          <div class="well row">
+              <div id="inpl-weather-main" data-icT="1" data-cId="26898" data-clBg="706f70" data-clTxt="f8f8f8" data-clLink="080808" data-txtDesc="1" data-fTemp="1" data-crPs="1" data-crWind="1" data-fr="2" data-wdh="150" data-hIf="564" data-d="http://widgets.interia.pl" style="position:relative;width:100%;background-color:#706f70">
+                <div id="inpl-weather-links" style="background-color:#706f70; padding:5px 20px 15px; text-align:center;line-height:20px">
+                  <a id="wlHbh" style="color:#080808;font-size:13px;text-decoration:none; display:block;" href="http://pogoda.interia.pl/prognoza-szczegolowa-polanczyk,cId,26898" title="Polańczyk - prognoza pogody" >Co godzin&#281;</a>
+                  <a id="wlfr" style="color:#080808;font-size:13px;text-decoration:none;" href="http://pogoda.interia.pl/prognoza-dlugoterminowa-polanczyk,cId,26898" title="Polańczyk - prognoza pogody" >Na 16 dni</a>
+                </div>
+              </div><script type="text/javascript">
+              (function(d, t, i) {
+                if (d.getElementById(i)) return;
+                var f = d.getElementsByTagName(t)[0], js = d.createElement(t);
+                js.id = i; js.src = "http://w.iplsc.com/widget/weather.jssc";
+                f.parentNode.appendChild(js);
+              }(document, "script", "widget-js"));
             </script>
           </div>
           <!-- widget pogoda -->
@@ -227,19 +193,7 @@
     </div>
     <!-- /.row -->
 
-    <hr>
 
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Seweryn Panek 2016</p>
-              <p>Content by Karina Tomalik</p>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
-    </footer>
 
 </div>
 <!-- /.container -->
