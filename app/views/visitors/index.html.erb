@@ -29,23 +29,33 @@
             </div>
           </div>
           -->
+          <div class="posts">
 
+              <% @posts.each do |post| %>
 
+                <div class="well">
+                  <div class="row">
+                    <h2>
+                      <%= post.title %>
+                    </h2>
+                  </div>
+                  <div class="row">
+                    <p>
+                      <span class="glyphicon glyphicon-time"></span> <%= post.created_at %>
+                    </p>
+                  </div>
+                  <div class="row">
+                    <img class="img-responsive img-rounded" src="http://www.isanok.pl/images/photos/1/11988/__b_solina_zapora.jpg" alt="">
+                  </div>
+                  <div class="row">
+                    <p>
+                      <%= post.content %>
+                    </p>
+                  </div>
+                </div>
+              <% end %>
 
-            <h2>
-                <%= link_to 'Ruszają zapisy na czerwiec 2016!', page_path('blogpost') %>
-            </h2>
-            <p class="lead">
-                by <%= link_to 'Karina Tomalik', "https://www.facebook.com/karina.tomalik" %>
-            </p>
-            <p><span class="glyphicon glyphicon-time"></span> Marzec 6, 2016 at 10:00 PM</p>
-            <hr>
-            <img class="img-responsive img-rounded" src="http://www.isanok.pl/images/photos/1/11988/__b_solina_zapora.jpg" alt="">
-            <hr>
-            <p>Wszystkich zainteresowanych prosimy o zapoznanie się z poniższymi informacjami...</p>
-            <%= link_to ('Czytaj więcej <span class="glyphicon glyphicon-chevron-right"></span>').html_safe, page_path('blogpost'), :class => "btn btn-primary" %>
-
-            <hr>
+          </div>
 
             <!-- Second Blog Post -->
           <!--
@@ -64,24 +74,6 @@
 
             <hr>
             -->
-
-            <!-- Third Blog Post -->
-          <!--
-            <h2>
-                <%= link_to 'Z okazji Bożego Narodzenia składamy serdeczne życzenia!', page_path('blogpost') %>
-            </h2>
-            <p class="lead">
-                by <%= link_to 'Załoga', root_path %>
-            </p>
-            <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
-            <hr>
-            <img class="img-responsive" src="http://i.wp.pl/a/f/jpeg/34123/prognoza_swieta_nr_smileus_fotolia.jpeg" alt="">
-            <hr>
-            <p>Wszystkiego naj naj, żeglarze!</p>
-            <%= link_to ('Czytaj więcej <span class="glyphicon glyphicon-chevron-right"></span>').html_safe, page_path('blogpost'), :class => "btn btn-primary" %>
-
-
-            <hr> -->
 
             <!-- Pager -->
           <!--
