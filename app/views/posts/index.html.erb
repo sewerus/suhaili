@@ -1,11 +1,14 @@
-<div class="posts">
-  <div class ="container">
-    <% @posts.each do |t| %>
-    <div class="card cd-xs-4">
-      <h2><%= t.title %> </h2>
-      <p><%= t.content %></p>
-      <p><%= t.created_at %></p>
-    </div>
+<div class="messages">
+  <div class="container">
+
+    <!-- Your code here -->
+    <% @posts.each do |post| %>
+        <div class="message">
+          <p class="content"><%= post.content %></p>
+          <p class="time"><%= post.created_at %></p>
+        </div>
     <% end %>
+    <%= link_to 'New Post', "posts/new" %>
+
   </div>
 </div>

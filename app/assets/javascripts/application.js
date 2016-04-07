@@ -10,8 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+
+
+// Cerulean
+// Bootswatch
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprocketss
-
-
+//= require cerulean/loader
+//= require cerulean/bootswatch
