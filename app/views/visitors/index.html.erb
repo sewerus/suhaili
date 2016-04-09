@@ -10,6 +10,8 @@
 
           <div class="posts">
 
+            <%= link_to 'Nowy post', new_post_path if user_signed_in? %><br>
+
               <% @posts.each do |post| %>
 
                 <div class="well">
