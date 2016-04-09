@@ -1,16 +1,16 @@
-<div class="create">
-  <div class="container">
+<div class="clearfix"></div>
+    <div class="well">
+      <div class="row">
+        <div class="edit">
+          <div class="main">
 
-    <!-- Your code here -->
-    <%= form_for(@post) do |f| %>
-        <div class="field">
-          <%= f.label :post %><br>
-          <%= f.text_area :content %>
-        </div>
-        <div class="actions">
-          <%= f.submit "Create" %>
-        </div>
-    <% end %>
+            <%= simple_form_for(@post) do |f| %>
+                <%= f.input :title, label: "Tytuł:" %> <br>
+                <%= f.input :content, label: "Treść:" %><br>
+                <%= f.button :submit, 'Utwórz!' %>
+            <% end %>
 
-  </div>
-</div>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -1,14 +1,38 @@
-<div class="messages">
-  <div class="container">
+<div class="posts">
 
-    <!-- Your code here -->
-    <% @posts.each do |post| %>
-        <div class="message">
-          <p class="content"><%= post.content %></p>
-          <p class="time"><%= post.created_at %></p>
-        </div>
-    <% end %>
-    <%= link_to 'New Post', "posts/new" %>
-
+  <% if user_signed_in? %>
+  <div class="well row">
+    <div>
+      <h3><%= link_to 'Nowy post', new_post_path if user_signed_in? %></h3>
+    </div>
   </div>
+  <% end %>
+
+  <% @posts.each do |post| %>
+
+      <div class="well row">
+        <div>
+          <h2>
+            <%= post.title %>
+          </h2>
+          <%= link_to 'Edytuj', [:edit, post] if user_signed_in? %><br>
+          <%= link_to 'Usuń', post, method: :delete if user_signed_in? %>
+        </div>
+        <div>
+          <p>
+            <span class="glyphicon glyphicon-time"></span> <%= time_ago_in_words post.created_at %> temu<br>
+            <span class="glyphicon glyphicon-time"></span> <%= post.created_at %>
+          </p>
+        </div>
+        <div>
+          <img class="img-responsive img-rounded" src="http://www.isanok.pl/images/photos/1/11988/__b_solina_zapora.jpg" alt="">
+        </div>
+        <div>
+          <p><br>
+            <%= post.content %>
+          </p>
+        </div>
+      </div>
+  <% end %>
+
 </div>
