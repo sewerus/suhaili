@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <%= link_to 'Edytuj konto', edit_user_registration_path %><br>
   <%= link_to 'Wyloguj', destroy_user_session_path %>
+    <%#= link_to 'Nowy użytkownik', new_user_registration_path %><br>
 <% else %>
   <%= link_to 'Zaloguj', new_user_session_path %>
-    <%= link_to 'Nowy użytkownik', new_user_registration_path %><br>
 <% end %>
