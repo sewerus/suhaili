@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :contacts
   get '/licences' => 'licences#index'
   resources :licences
+  get '/cruises' => 'cruises#index'
+  resources :cruises
 end

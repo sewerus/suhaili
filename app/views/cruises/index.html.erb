@@ -1,0 +1,26 @@
+<div class="contact">
+
+  <h2>Rejsy:</h2><br>
+
+  <% if user_signed_in? %>
+      <div class="info well row">
+        <div>
+          <h3><%= link_to 'Dodaj tekst', new_cruise_path if user_signed_in? %></h3>
+        </div>
+      </div>
+  <% end %>
+
+  <% @cruises.each do |post| %>
+
+      <div class="info well row">
+        <div>
+          <p class="content"><%= post.content %></p>
+          <div>
+            <%= link_to 'Edytuj', [:edit, post] if user_signed_in? %><br>
+            <%= link_to 'Usuń', post, method: :delete, data: {confirm: 'Czy na pewno usunąć tekst?'} if user_signed_in? %>
+          </div>
+        </div>
+      </div>
+  <% end %>
+
+</div>
