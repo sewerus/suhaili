@@ -1,7 +1,7 @@
 class CruisesController < ApplicationController
   before_action :authenticate_user!, only: [:edit, :new, :delete]
   def index
-    @licences = Cruise.all
+    @cruises = Cruise.all
   end
 
   def destroy
