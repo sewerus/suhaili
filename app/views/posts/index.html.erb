@@ -16,17 +16,17 @@
             <%= post.title %>
           </h2>
           <%= link_to 'Edytuj', [:edit, post] if user_signed_in? %><br>
-          <%= link_to 'Usuń', post, method: :delete if user_signed_in? %>
+          <%= link_to 'Usuń', post, method: :delete, data: {confirm: 'Czy na pewno usunąć post?'} if user_signed_in? %>
         </div>
         <div>
           <p>
             <span class="glyphicon glyphicon-time"></span> <%= time_ago_in_words post.created_at %> temu<br>
-            <span class="glyphicon glyphicon-time"></span> <%= post.created_at %>
+            <span class="glyphicon glyphicon-time"></span> <%= post.created_at.to_date %>
             <!--przez <%#= post.author %> -->
           </p>
         </div>
         <div>
-          <img class="img-responsive img-rounded" src="http://www.isanok.pl/images/photos/1/11988/__b_solina_zapora.jpg" alt="">
+          <img class="img-responsive img-rounded" src="<%#= post.img %>http://www.isanok.pl/images/photos/1/11988/__b_solina_zapora.jpg" alt="">
         </div>
         <div>
           <p><br>
