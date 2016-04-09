@@ -1,0 +1,26 @@
+<div class="contact">
+
+  <h2>Kontakt:</h2><br>
+
+  <% if user_signed_in? %>
+      <div class="contact well row">
+        <div>
+          <h3><%= link_to 'Dodaj kontakt', new_contact_path if user_signed_in? %></h3>
+        </div>
+      </div>
+  <% end %>
+
+  <% @contacts.each do |post| %>
+
+      <div class="contact well row">
+        <div>
+            <h3><%= post.content %></h3>
+          <div>
+            <%= link_to 'Edytuj', [:edit, post] if user_signed_in? %><br>
+            <%= link_to 'Usuń', post, method: :delete, data: {confirm: 'Czy na pewno usunąć kontakt?'} if user_signed_in? %>
+          </div>
+        </div>
+      </div>
+  <% end %>
+
+</div>
