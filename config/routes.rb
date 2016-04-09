@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   get '/cruises' => 'cruises#index'
   resources :cruises
   get '/pasts' => 'pasts#index'
-  resources :cruises
+  resources :pasts
 end
