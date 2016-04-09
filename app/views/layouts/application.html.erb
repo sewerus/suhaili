@@ -50,16 +50,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <li><%= link_to 'Aktualności', root_path, class: 'navbar-brand' %></li>
+        <li><%#= link_to 'Aktualności', root_path, class: 'navbar-brand' %></li>
       </div>-->
         <ul class="nav navbar-nav nav-justified">
-          <li><%= link_to 'Aktualności', root_path, class: 'navbar-brand' %>
+          <li><%= link_to 'Aktualności', posts_path, class: 'navbar-brand' %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown">Klub <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Historia</a></li>
-              <li><a href="#">Historia</a></li>
-              <li><a href="#">Historia</a></li>
+              <li><%= link_to 'Historia', pasts_path, class: 'navbar-brand'  %></li>
             </ul>
           </li>
           <li><%= link_to 'Galeria', root_path, class: 'navbar-brand'  %></li>
