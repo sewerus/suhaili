@@ -1,0 +1,15 @@
+<div class="clearfix"></div>
+<div class="well">
+  <div class="row">
+    <div class="edit">
+      <div class="main">
+
+        <%= simple_form_for(@licence) do |f| %>
+            <%= f.input :content, label: "Treść:" %><br>
+            <%= f.button :submit, 'Utwórz!' %>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

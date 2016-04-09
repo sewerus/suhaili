@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :posts
   get '/contacts' => 'contacts#index'
   resources :contacts
+  get '/licences' => 'licences#index'
+  resources :licences
 end
