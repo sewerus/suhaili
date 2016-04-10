@@ -1,0 +1,47 @@
+<!-- tytul -->
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1 style="font-family: 'Julius Sans One', sans-serif bold; font-size: 70px; color: black">Yacht Klub SUHAILI</h1>
+    </div>
+  </div>
+</div>
+
+<!-- logo i img --><br>
+<div class="container col-md-12">
+  <div class="row col-md-10 col-md-offset-1">
+    <div class="col-md-5"><%= image_tag("logo_black.png", :class => "img-rounded pull-right", :style => "width: 230px") %></div>
+    <div class="col-md-5"><%= image_tag("yachty.jpg", :class => "img-rounded pull-left", :style => "width: 430px") %></div>
+  </div>
+</div>
+
+<!-- menu --><br>
+<div class="col-md-10 col-md-offset-1">
+  <nav class="navbar navbar-inverse">
+    <div style="margin: 0 auto"><!--
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <li><%#= link_to 'Aktualności', root_path, class: 'navbar-brand' %></li>
+      </div>-->
+      <ul class="nav navbar-nav nav-justified">
+        <li><%= link_to 'Aktualności', posts_path, class: 'navbar-brand' %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown">Klub <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'Historia', pasts_path  %></li>
+          </ul>
+        </li>
+        <li><%= link_to 'Galeria', root_path, class: 'navbar-brand'  %></li>
+        <li><%= link_to 'Rejsy', cruises_path, class: 'navbar-brand'  %></li>
+        <li><%= link_to 'Patenty', licences_path, class: 'navbar-brand'  %></li>
+        <li><%= link_to 'Kontakt', contacts_path, class: 'navbar-brand' %></li>
+      </ul>
+    </div>
+
+  </nav>
+</div>
