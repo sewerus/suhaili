@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to root_path
+    redirect_to '/posts'
   end
 
   def new
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes(post_params)
-      redirect_to root_path
+      redirect_to '/posts'
     else
       render 'edit'
     end

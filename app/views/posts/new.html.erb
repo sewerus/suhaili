@@ -6,8 +6,9 @@
 
             <%= simple_form_for(@post) do |f| %>
                 <%= f.input :title, label: "Tytuł:" %> <br>
-                <%#= f.input :img, label: "Link do obrazu:" %>
+                <%#= f.input :img, as: :string, label: "Link do obrazu:" %><br>
                 <%= f.input :content, label: "Treść:" %><br>
+                <%#= f.input :author, label: "Autor:" %><br>
                 <%= f.button :submit, 'Utwórz!' %>
             <% end %>
 
